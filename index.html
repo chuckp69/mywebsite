@@ -1,16 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echoes of Concrete | Urbex Exploration</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --accent-color: #ff4a4a; /* Industrial red accent */
+            --card-bg: #1c1c1c;
+            --border-color: #333333;
+            --muted-text: #888888;
+        }
 
-<html>
-    <h1>
-        Hey, I'm NetworkChuck
-    </h1>
-    <body>
-        <h2>About me</h2>
-        <p>
-            I am a coffee addict who makes vidoes sometimes.
-        </p>
-        <h2>What I'm working on</h2>
-        <p>
-            I'm obsessed with AI right now and I'm working on the CPTS from HTB.
-        </p>
-    </body>
+        body {
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 5rem 2rem 3rem 2rem;
+            text-align: center;
+            border-bottom: 2px dashed var(--border-color);
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            margin-top: 0;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            color: #ffffff;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 0.8rem;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Photo Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+            border-color: var(--accent-color);
+        }
+
+        .photo-placeholder {
+            width: 100%;
+            height: 200px;
+            background-color: #2a2a2a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted-text);
+            font-size: 0.9rem;
+        }
+
+        /* If you add real images later, this styles them */
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-info {
+            padding: 1rem;
+        }
+
+        .gallery-info h3 {
+            margin: 0 0 0.5rem 0;
+            color: #ffffff;
+            font-size: 1.2rem;
+        }
+
+        .gallery-info p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--muted-text);
+        }
+
+        /* Logbook / Blog Section */
+        .log-entry {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
+        }
+
+        .log-meta {
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .log-entry h3 {
+            margin: 0 0 1rem 0;
+            color: #ffffff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--muted-text);
+        }
+
+        .disclaimer {
+            font-size: 0.75rem;
+            color: #555555;
+            max-width: 600px;
+            margin: 1rem auto 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Echoes of Concrete</h1>
+        <p class="subtitle">[ Documenting Abandoned Spaces ]</p>
+        <p>Take nothing but photographs, leave nothing but footprints.</p>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>The Manifesto</h2>
+            <p>Welcome to my digital logbook. I explore the forgotten, decaying, and overlooked structures of our modern world. From silent industrial complexes to abandoned historical estates, this site serves as a visual archive of places frozen in time before they disappear forever.</p>
+        </section>
+
+        <section id="gallery">
+            <h2>Recent Expeditions</h2>
+            <div class="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item">
+                    <div class="photo-placeholder">Image Link Here</div>
+                    <!-- To add a real image later, replace the line above with: <img src="your-image.jpg" alt="Description"> -->
+                    <div class="gallery-info">
+                        <h3>The Iron Foundry</h3>
+                        <p>Heavy machinery left to rust in a massive mid-century manufacturing plant.</p>
+                    </div>
+                </div>
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item">
+                    <div class="photo-placeholder">Image Link Here</div>
+                    <div class="gallery-info">
+                        <h3>Grand Ballroom Hotel</h3>
+                        <p>Decaying velvet curtains and peeling wallpaper inside a 1920s luxury hotel.</p>
+                    </div>
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item">
+                    <div class="photo-placeholder">Image Link Here</div>
+                    <div class="gallery-info">
+                        <h3>Subterranean Tunnels</h3>
+                        <p>Navigating the old utility and storm water networks hidden beneath the city grid.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="logbook">
+            <h2>Field Logbook</h2>
+            
+            <div class="log-entry">
+                <div class="log-meta">LOG // 04.12 // STATUS: COMPLETED</div>
+                <h3>Midnight at the Sanatorium</h3>
+                <p>Managed to gain access to the main medical wing just before midnight. The peeling paint on the ceiling looks like cracked earth under a flashlight. Dust levels were incredibly high; glad I brought a proper respirator mask. Spent three hours capturing long exposures of the main operating theater.</p>
+            </div>
+
+            <div class="log-entry">
+                <div class="log-meta">LOG // 03.22 // STATUS: COMPLETED</div>
+                <h3>The Forgotten Rail Yard</h3>
+                <p>An easier exploration during golden hour. Multiple vintage train cars left sitting on overgrown tracks. Nature is completely reclaiming the steel chassis. Discovered a locker room with old worker logs dating back to the late 1970s.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Urbex Explorer. Built for GitHub Pages.</p>
+        <p class="disclaimer">Disclaimer: I do not break into properties, vandalize structures, or encourage trespassing. All explorations are conducted with respect for the history and structural integrity of the sites.</p>
+    </footer>
+
+</body>
 </html>
